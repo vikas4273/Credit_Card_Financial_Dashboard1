@@ -1,6 +1,16 @@
 # Credit_Card_Financial_Dashboard1
 power Bi Dashboard
-DAX Queries
+>CREDIT CARD WEEKLY STATUS REPORT
+>Project Objective
+ To develop a comprehensive credit 
+card weekly dashboard that 
+provides real-time insights into key 
+performance metrics and trends, 
+enabling stakeholders to monitor 
+and analyze credit card operations 
+effectively
+
+>DAX Queries
  week_num2 = WEEKNUM('public cc_detail'[week_start_date])
  Revenue = 'public cc_detail'[annual_fees] + 'public cc_detail'[total_trans_amt] + 'public cc_detail'[interest_earned]
  Current_week_Reveneue = CALCULATE(
@@ -14,7 +24,7 @@ Previous_week_Reveneue = CALCULATE(
  ALL('public cc_detail'),
  'public cc_detail'[week_num2] = MAX('public cc_detail'[week_num2])-1))
  
-DAX Queries
+>DAX Queries
  AgeGroup = SWITCH(
  TRUE(),
  'public cust_detail'[customer_age] < 30, "20-30",
